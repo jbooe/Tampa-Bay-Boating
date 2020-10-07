@@ -6,7 +6,7 @@ function Home(props) {
         <div className="container">
             <img 
             className='boating'
-            src={require ('../images/boatingGeneric.jpg')} alt="Boating in Tampa Bay"
+            src={require ('../images/boatingGeneric2.jpg')} alt="Boating in Tampa Bay"
             
             />
         </div>
