@@ -9,33 +9,32 @@ function About(props) {
                 <div className="col">
                     <Breadcrumb>
                         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-                        <BreadcrumbItem active>About Us</BreadcrumbItem>
+                        <BreadcrumbItem active>About</BreadcrumbItem>
                     </Breadcrumb>
-                    <h2>About Me</h2>
+                    <h2>About</h2>
                     <hr />
                 </div>
             </div>
             <div className="row row-content">
                 <div className="col-sm-6">
-                    <h3>Our Mission</h3>
-                    <p>We present a curated database of the best campsites in the vast woods and backcountry of the World Wide Web Wilderness.
-                         We increase access to adventure for the public while promoting safe and respectful use of resources. The expert 
-                         wilderness trekkers on our staff personally verify each campsite to make sure that they are up to our standards. 
-                         We also present a platform for campers to share reviews on campsites they have visited with each other.</p>
+                    <h3>My Mission</h3>
+                    <p>To show a small fraction of places to go and adventures to take in the Tampa Bay waters.  
+                        I view boats as a vehicle to explore exciting new places and a great way to spend the day 
+                        relaxing helping to take care of the stresses of life. With a boat, you can spend the day 
+                        on an island beach, grab a bite to eat at a restaurant, or cool off on a sandbar.  
+                        The possibilities really are endless!</p>
                 </div>
                 <div className="col-sm-6">
                     <Card>
-                        <CardHeader className="bg-primary text-white"><h3>Facts At a Glance</h3></CardHeader>
+                        <CardHeader className="bg-primary text-white"><h3>Boats I Captian</h3></CardHeader>
                         <CardBody>
                             <dl className="row">
-                                <dt className="col-6">Founded</dt>
-                                <dd className="col-6">February 3, 2016</dd>
-                                <dt className="col-6">No. of Campsites in 2019</dt>
-                                <dd className="col-6">563</dd>
-                                <dt className="col-6">No. of Reviews in 2019</dt>
-                                <dd className="col-6">4388</dd>
-                                <dt className="col-6">Employees</dt>
-                                <dd className="col-6">42</dd>
+                                <dt className="col-6">22' Champion Bay Boat</dt>
+                                <dd className="col-6">"Bouy's Adrift" - cursed</dd>
+                                <dt className="col-6">20' Robalo</dt>
+                                <dd className="col-6">No Name - really reliable</dd>
+                                <dt className="col-6">32' Sea Ray Sundancer</dt>
+                                <dd className="col-6">"Rasing HVAC" - expensive</dd>
                             </dl>
                         </CardBody>
                     </Card>
@@ -44,10 +43,9 @@ function About(props) {
                     <Card className="bg-light mt-3">
                         <CardBody>
                             <blockquote className="blockquote">
-                                <p className="mb-0">I will not follow where the path may lead, but I will go where there is no path, and I will leave a trail.</p>
-                                <footer className="blockquote-footer">Muriel Strode,{' '}
-                                    <cite title="Source Title">"Wind-Wafted Wild Flowers" -
-                                    The Open Court, 1903</cite>
+                                <p className="mb-0">"The sea, once it casts its spell, holds one in its net of wonder forever".</p>
+                                <footer className="blockquote-footer">Jacques Yves Custeau{' '}
+                                    
                                 </footer>
                             </blockquote>
                         </CardBody>
