@@ -26,7 +26,7 @@ function About(props) {
                 </div>
                 <div className="col-sm-6">
                     <Card>
-                        <CardHeader className="bg-primary text-white"><h3>Boats I Captian</h3></CardHeader>
+                        <CardHeader className="bg-primary text-white"><h3>Boats I Captain</h3></CardHeader>
                         <CardBody>
                             <dl className="row">
                                 <dt className="col-6">22' Champion Bay Boat</dt>
