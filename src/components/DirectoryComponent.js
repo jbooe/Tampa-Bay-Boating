@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardDeck, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import SharkAlert from './AlertComponent';
+
 
 class Directory extends Component {
     render() {
@@ -23,16 +25,16 @@ class Directory extends Component {
                             <Card className='bg-light mt-3 text-center' style={{ width: 350 }}>
                                 <CardImg style={{ height: 260 }} src={require('../images/island.jpg')} alt='Text Name' />
                                 <CardBody>
-                                    <CardTitle>'text name'</CardTitle>
-                                    <CardText>'text description'</CardText>
+                                    <CardTitle>Tampa Bay Area Islands</CardTitle>
+                                    <CardText>Come and explore one of our many beautiful islands</CardText>
                                 </CardBody>
                             </Card>
 
                             <Card className='bg-light mt-3 text-center' style={{ width: 350 }}>
                                 <CardImg src={require('../images/sandbar.jpg')} alt='Text Name' />
                                 <CardBody>
-                                    <CardTitle>'text name'</CardTitle>
-                                    <CardText>'text description'</CardText>
+                                    <CardTitle>Sand Bars</CardTitle>
+                                    <CardText>A boating hazard, but a great place to park and relax</CardText>
                                 </CardBody>
                             </Card>
                         </CardDeck>
@@ -44,17 +46,18 @@ class Directory extends Component {
                             <Card className='bg-light mt-3 text-center' style={{ width: 350 }}>
                                 <CardImg src={require('../images/restaurant.jpg')} alt='Text Name' />
                                 <CardBody>
-                                    <CardTitle>'text name'</CardTitle>
-                                    <CardText>'text description'</CardText>
+                                    <CardTitle>Local Boat Access Restaurants</CardTitle>
+                                    <CardText>Grab a bite to eat after a great day on the water</CardText>
                                 </CardBody>
                             </Card>
 
-                            <Card className='bg-danger mt-3 text-center' style={{ width: 350 }}>
+                            <Card className='bg-light mt-3 text-center' style={{ width: 350 }}>
                                 <CardImg style={{ height: 310 }} src={require('../images/shark.jpg')} alt='Text Name' />
                                 <CardBody >
-                                    <CardTitle>'text name'</CardTitle>
-                                    <CardText>'text description'</CardText>
+                                    <CardTitle>The Local Wildlife</CardTitle>
+                                    <CardText>You're gonna need a bigger boat</CardText>
                                 </CardBody>
+                                <SharkAlert/>
                             </Card>
                         </CardDeck><br />
                     </div>
