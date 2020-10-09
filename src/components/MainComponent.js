@@ -4,16 +4,15 @@ import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import Directory from './DirectoryComponent';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+
 
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
 
-        const HomePage = () => {
+        const homePage = () => {
             return (
                 <Home />
             );
@@ -25,11 +24,11 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     <Route exact path='/aboutus' component={About} />
-                    <Route path='/home' component={HomePage} />
+                    <Route path='/home' component={homePage} />
                     <Route exact path='/contactus' component={Contact} />
+                    <Route exact path='/directory' component={Directory} />
                     <Redirect to='/home' />
                 </Switch>
-                
                 <Footer />
             </div>
 
@@ -37,4 +36,4 @@ class Main extends Component {
     };
 }
 
-export default Main;
+export default withRouter(Main);
