@@ -5,16 +5,37 @@ import Home from './HomeComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
 import Directory from './DirectoryComponent';
+import { DIRECTORYLISTS } from '../shared/directoryItems';
+import { ISLANDS } from '../shared/islands';
+import { RESTAURANTS } from '../shared/restaurants';
+import { SANDBARS } from '../shared/sandbars';
+import { BOATS } from '../shared/boating';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 
 
 
 class Main extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            directoryLists: DIRECTORYLISTS,
+            islands: ISLANDS,
+            restaurants: RESTAURANTS,
+            sandbars: SANDBARS,
+            boats: BOATS
+        };
+
+    }
+
+    
     render() {
 
         const homePage = () => {
             return (
-                <Home />
+                <Home 
+                    boat={this.state.boats.filter(boat => boat.featured)[0]}
+                />
             );
         };
 

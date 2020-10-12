@@ -2,22 +2,26 @@ export const RESTAURANTS = [
     {
         id: 0,
         name: 'The Big Catch',
-        coord: '27.7927 N, 82.6578 W'
+        coord: '27.7927 N, 82.6578 W',
+        image: 'assets/images/big-catch-restaurant.jpg'
     },
     {
         id: 1,
         name: 'Frescos',
-        coord: '27.7971 N, 82.6402 W'
+        coord: '27.7971 N, 82.6402 W',
+        image: 'assets/images/frescos-restaurant.jpg'
     },
     {
         id: 2, 
         name: 'The Getaway',
-        coord: '27.8459 N, 82.6455 W'
+        coord: '27.8459 N, 82.6455 W',
+        image: 'assets/images/getaway-restaurant.jpg'
     },
     {
         id: 3,
         name: 'Jacksons Bistro',
-        coord: '27.8885 N, 82.6156 W'
+        coord: '27.8885 N, 82.6156 W',
+        image: 'assets/images/jacksons-restaurant.jpg'
     }
     
 ];

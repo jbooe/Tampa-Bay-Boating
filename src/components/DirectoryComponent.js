@@ -1,10 +1,53 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardDeck, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardDeck, Breadcrumb, BreadcrumbItem, CardImgOverlay } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import SharkAlert from './AlertComponent';
 
 
-class Directory extends Component {
+function RenderDirectoryItem({ directoryItem }) {
+    return (
+        <Card>
+            <Link to={`/directory/${directoryItem.id}`}>
+            <CardImg width="100%" src={directoryItem.image} />
+                <CardImgOverlay>
+                    <CardTitle>{directoryItem.name}</CardTitle>
+                </CardImgOverlay>
+            </Link>
+        </Card>
+    );
+}
+
+function Directory(props) {
+
+    const directory = props.directoryLists.map( directoryItem => {
+        return (
+            <div key={directoryItem.id} className="col-md-5 m-1">
+                <RenderDirectoryItem directoryItem={directoryItem} />
+            </div>
+        );
+    });
+
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <Breadcrumb>
+                        <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>Directory</BreadcrumbItem>
+                    </Breadcrumb>
+                    <h2>Directory</h2>
+                    <hr />
+                </div>
+            </div>
+            <div className="row">
+                {directory}
+            </div>
+            <br />
+        </div>
+        
+    );
+}
+
+/*class Directory extends Component {
     render() {
         return (
             <div className="container">
@@ -57,7 +100,7 @@ class Directory extends Component {
                                     <CardTitle>The Local Wildlife</CardTitle>
                                     <CardText>You're gonna need a bigger boat</CardText>
                                 </CardBody>
-                                <SharkAlert/>
+                                <SharkAlert />
                             </Card>
                         </CardDeck><br />
                     </div>
@@ -67,7 +110,7 @@ class Directory extends Component {
             </div>
         );
     }
-}
+}*/
 
 
 export default Directory;

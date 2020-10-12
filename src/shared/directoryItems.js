@@ -1,23 +1,27 @@
-export const directoryList = [
+export const DIRECTORYLISTS = [
     {
         id: 0,
-        name: 'Islands',
-        description: 'A Good place to stay'
+        name: 'Tampa Bay Area Islands',
+        description: 'Come and explore one of our many beautiful islands',
+        image: 'assets/images/island.jpg'
     },
     {
         id: 1,
         name: 'Sand Bars',
-        description: 'Another good place to be'
+        description: 'A boating hazard, but a great place to park and relax',
+        image: 'assets/images/sandbar.jpg'
     },
     {
         id: 2, 
-        name: 'Restaurants',
-        description: 'Lets eat'
+        name: 'Local Boat Access Restaurants',
+        description: 'Grab a bite to eat after a great day on the water',
+        image: 'assets/images/restaurant.jpg'
     },
     {
         id: 3,
-        name: 'Shark',
-        description: 'Stay Away'
+        name: 'The Local Wildlife',
+        description: "You're gonna need a bigger boat",
+        image: 'assets/images/shark.jpg'
     }
     
 ];

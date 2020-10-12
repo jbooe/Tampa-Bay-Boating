@@ -1,16 +1,31 @@
 import React from 'react';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+
+
+function RenderCard({item}) {
+    return (
+        <Card>
+            <CardImg src={item.image} alt='Boating in Tampa Bay' />
+            <CardBody>
+                <CardTitle>{item.name}</CardTitle>
+                <CardText>{item.description}</CardText>
+            </CardBody>
+        </Card>
+    );
+}
+
 
 
 function Home(props) {
-    return(
+    return (
         <div className="container">
-            <img 
-            className='boating'
-            src={require ('../images/boatingGeneric2.jpg')} alt="Boating in Tampa Bay"
-            
-            />
+            <div className="row">
+                <div className="col-md m-1">
+                    <RenderCard item={props.boat} />
+                </div>
+            </div>
         </div>
-    )
+    );
 }
 
 export default Home;

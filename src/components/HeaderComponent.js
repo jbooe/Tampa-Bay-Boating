@@ -19,7 +19,7 @@ class Header extends Component {
 
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/"><img src={require('../images/anchor2.png')} height="50" width="50" alt="Anchor Logo" /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src='/assets/images/anchor2.png' height="50" width="50" alt="Anchor Logo" /></NavbarBrand>
                         <Nav navbar>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/home">
