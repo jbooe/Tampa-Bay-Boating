@@ -47,7 +47,7 @@ class Main extends Component {
                     <Route exact path='/aboutus' component={About} />
                     <Route path='/home' component={homePage} />
                     <Route exact path='/contactus' component={Contact} />
-                    <Route exact path='/directory' component={Directory} />
+                    <Route exact path='/directory' render={() => <Directory directoryLists={this.state.directoryLists} />} /> 
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />
