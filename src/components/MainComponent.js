@@ -14,6 +14,7 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 
 
 
+
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -33,9 +34,9 @@ class Main extends Component {
 
         const homePage = () => {
             return (
-                <Home 
-                    boat={this.state.boats.filter(boat => boat.featured)[0]}
-                />
+                
+                <Home boats={this.state.boats[0]}/>
+                
             );
         };
 
