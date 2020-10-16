@@ -4,6 +4,29 @@ import { Link } from 'react-router-dom';
 import { FadeTransform } from 'react-animation-components';
 
 function RenderDirectoryItem({ directoryItem }) {
+    if (directoryItem.id === 3) {
+
+        return (
+            <FadeTransform
+            in
+            transformProps={{
+                exitTransform: 'scale(0.5) translateY(50%)'
+            }}
+        >
+            <Card>
+                <Link to=''>
+                    <CardImg width='100%' height={270} src={directoryItem.image} alt={directoryItem.name} />
+                    <CardImgOverlay>
+                        <CardTitle>{directoryItem.name}</CardTitle>
+                    </CardImgOverlay>
+                    </Link>
+                <CardBody>
+                    <CardText>{directoryItem.description}</CardText>
+                </CardBody>
+            </Card>
+        </FadeTransform>
+        )
+    }
     return (
         <FadeTransform
             in
@@ -12,12 +35,12 @@ function RenderDirectoryItem({ directoryItem }) {
             }}
         >
             <Card>
-                <Link to={`/directory/${directoryItem.id}`}>
+                    <Link to='/display'>
                     <CardImg width='100%' height={270} src={directoryItem.image} alt={directoryItem.name} />
                     <CardImgOverlay>
                         <CardTitle>{directoryItem.name}</CardTitle>
                     </CardImgOverlay>
-                </Link>
+                    </Link>
                 <CardBody>
                     <CardText>{directoryItem.description}</CardText>
                 </CardBody>
@@ -31,7 +54,8 @@ function Directory(props) {
     const directory = props.directoryLists.map(directoryItem => {
         return (
             <div key={directoryItem.id} className="col-md-5 m-1" >
-                <RenderDirectoryItem directoryItem={directoryItem} />
+                <RenderDirectoryItem directoryItem={directoryItem}
+                />
             </div>
         );
     });
@@ -41,7 +65,7 @@ function Directory(props) {
             <div className="row">
                 <div className="col">
                     <Breadcrumb>
-                        <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem><Link to="/display">Home</Link></BreadcrumbItem>
                         <BreadcrumbItem active>Directory</BreadcrumbItem>
                     </Breadcrumb>
                     <h2>Directory</h2>

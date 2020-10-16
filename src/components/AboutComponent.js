@@ -2,7 +2,7 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function About(props) {
+function About() {
     return (
         <div className="container">
             <div className="row">
@@ -22,7 +22,7 @@ function About(props) {
                         I view boats as a vehicle to explore exciting new places and a great way to spend the day 
                         relaxing helping to take care of the stresses of life. With a boat, you can spend the day 
                         on an island beach, grab a bite to eat at a restaurant, or cool off on a sandbar.  
-                        The possibilities really are endless!</p>
+                        The possibilities are endless!</p>
                 </div>
                 <div className="col-sm-6">
                     <Card>
