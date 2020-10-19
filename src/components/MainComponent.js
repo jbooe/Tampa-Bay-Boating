@@ -11,7 +11,7 @@ import { RESTAURANTS } from '../shared/restaurants';
 import { SANDBARS } from '../shared/sandbars';
 import { BOATS } from '../shared/boating';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import Display from './DisplayComponents';
+import { DisplaySandbars, DisplayRestaurants, DisplayIslands }from './DisplayComponents';
 
 
 class Main extends Component {
@@ -50,7 +50,9 @@ class Main extends Component {
                     <Route exact path='/about' component={About} />
                     <Route path='/home' component={homePage} />
                     <Route exact path='/contact' component={Contact} />
-                    <Route exact path='/display' render={() => <Display islands={this.state.islands} /> } />
+                    <Route exact path='/displayislands' render={() => <DisplayIslands islands={this.state.islands} /> } />
+                    <Route exact path='/displaysandbars' render={() => <DisplaySandbars sandbars={this.state.sandbars} /> } />
+                    <Route exact path='/displayrestaurants' render={() => <DisplayRestaurants restaurants={this.state.restaurants} /> } />
                     <Route exact path='/directory' render={() => <Directory directoryLists={this.state.directoryLists} />} /> 
                     <Redirect to='/home' />
                 </Switch>

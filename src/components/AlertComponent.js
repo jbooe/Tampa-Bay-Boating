@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Alert } from 'reactstrap';
+import { Button, Alert, Card, CardImg, CardImgOverlay, CardTitle, CardBody, CardText } from 'reactstrap';
 
 
 
@@ -25,6 +25,15 @@ class SharkAlert extends Component {
     render() {
         return (
             <div className="App">
+                <Card className="col-md-5 m-1">
+                        <CardImg width='100%' height={270} src={this.props.directoryLists[3].image} alt={this.props.directoryLists[3].name} />
+                        <CardImgOverlay>
+                            <CardTitle>{this.props.directoryLists[3].name}</CardTitle>
+                        </CardImgOverlay>
+                    <CardBody>
+                        <CardText>{this.props.directoryLists[3].description}</CardText>
+                    </CardBody>
+                </Card>
                 <Button type="button" color="danger" className='mb-3' onClick={() => { this.onShowAlert() }} >Important!</Button>
                 <Alert color="info"isOpen={this.state.visible} ><i className="ni ni-like-2">Fun Fact: Tampa Bay is the shark capital of the world, with the largest population
                 and the largest variety, but that shouldn't keep you out of the water. You are more likely to die from a sink hole, boating accident, tornado,

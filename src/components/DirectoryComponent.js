@@ -3,62 +3,10 @@ import { Card, CardImg, CardTitle, Breadcrumb, BreadcrumbItem, CardImgOverlay, C
 import { Link } from 'react-router-dom';
 import { FadeTransform } from 'react-animation-components';
 
-function RenderDirectoryItem({ directoryItem }) {
-    if (directoryItem.id === 3) {
 
-        return (
-            <FadeTransform
-            in
-            transformProps={{
-                exitTransform: 'scale(0.5) translateY(50%)'
-            }}
-        >
-            <Card>
-                <Link to=''>
-                    <CardImg width='100%' height={270} src={directoryItem.image} alt={directoryItem.name} />
-                    <CardImgOverlay>
-                        <CardTitle>{directoryItem.name}</CardTitle>
-                    </CardImgOverlay>
-                    </Link>
-                <CardBody>
-                    <CardText>{directoryItem.description}</CardText>
-                </CardBody>
-            </Card>
-        </FadeTransform>
-        )
-    }
-    return (
-        <FadeTransform
-            in
-            transformProps={{
-                exitTransform: 'scale(0.5) translateY(50%)'
-            }}
-        >
-            <Card>
-                    <Link to='/display'>
-                    <CardImg width='100%' height={270} src={directoryItem.image} alt={directoryItem.name} />
-                    <CardImgOverlay>
-                        <CardTitle>{directoryItem.name}</CardTitle>
-                    </CardImgOverlay>
-                    </Link>
-                <CardBody>
-                    <CardText>{directoryItem.description}</CardText>
-                </CardBody>
-            </Card>
-        </FadeTransform>
-    );
-}
 
 function Directory(props) {
-
-    const directory = props.directoryLists.map(directoryItem => {
-        return (
-            <div key={directoryItem.id} className="col-md-5 m-1" >
-                <RenderDirectoryItem directoryItem={directoryItem}
-                />
-            </div>
-        );
-    });
+     
 
     return (
         <div className="container">
@@ -72,9 +20,59 @@ function Directory(props) {
                     <hr />
                 </div>
             </div>
+            <FadeTransform
+            in
+            transformProps={{
+                exitTransform: 'scale(0.5) translateY(50%)'
+            }}
+        >
             <div className="row" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
-                {directory}
+           
+                <Card className="col-md-5 m-1">
+                    <Link to='/displayislands'>
+                        <CardImg width='100%' height={270} src={props.directoryLists[0].image} alt={props.directoryLists[0].name} />
+                        <CardImgOverlay>
+                            <CardTitle>{props.directoryLists[0].name}</CardTitle>
+                        </CardImgOverlay>
+                    </Link>
+                    <CardBody>
+                        <CardText>{props.directoryLists[0].description}</CardText>
+                    </CardBody>
+                </Card>
+                <Card className="col-md-5 m-1">
+                    <Link to='/displaysandbars'>
+                        <CardImg width='100%' height={270} src={props.directoryLists[1].image} alt={props.directoryLists[1].name} />
+                        <CardImgOverlay>
+                            <CardTitle>{props.directoryLists[1].name}</CardTitle>
+                        </CardImgOverlay>
+                    </Link>
+                    <CardBody>
+                        <CardText>{props.directoryLists[1].description}</CardText>
+                    </CardBody>
+                </Card>
+                <Card className="col-md-5 m-1">
+                    <Link to='/displayrestaurants'>
+                        <CardImg width='100%' height={270} src={props.directoryLists[2].image} alt={props.directoryLists[2].name} />
+                        <CardImgOverlay>
+                            <CardTitle>{props.directoryLists[2].name}</CardTitle>
+                        </CardImgOverlay>
+                    </Link>
+                    <CardBody>
+                        <CardText>{props.directoryLists[2].description}</CardText>
+                    </CardBody>
+                </Card>
+                <Card className="col-md-5 m-1">
+                        <CardImg width='100%' height={270} src={props.directoryLists[3].image} alt={props.directoryLists[3].name} />
+                        <CardImgOverlay>
+                            <CardTitle>{props.directoryLists[3].name}</CardTitle>
+                        </CardImgOverlay>
+                    <CardBody>
+                        <CardText>{props.directoryLists[3].description}</CardText>
+                    </CardBody>
+                </Card>
+                
             </div>
+            </FadeTransform> 
             <br />
         </div>
 
