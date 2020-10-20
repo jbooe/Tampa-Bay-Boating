@@ -8,16 +8,16 @@ function RenderDirectoryItem({ directoryItem }) {
 
     return (
         <Fade in >
-        <Card>
-            <CardImg width='100%' height={270} src={directoryItem.image} alt={directoryItem.name} />
-            <CardImgOverlay>
-                <CardTitle>{directoryItem.name}</CardTitle>
-            </CardImgOverlay>
-            <CardBody>
-                <CardText>{directoryItem.description}</CardText>
-                <CardText>Located At {directoryItem.coord}</CardText>
-            </CardBody>
-        </Card>
+            <Card>
+                <CardImg width='100%' height={270} src={directoryItem.image} alt={directoryItem.name} />
+                <CardImgOverlay>
+                    <CardTitle>{directoryItem.name}</CardTitle>
+                </CardImgOverlay>
+                <CardBody>
+                    <CardText>{directoryItem.description}</CardText>
+                    <CardText>Located At {directoryItem.coord}</CardText>
+                </CardBody>
+            </Card>
         </Fade>
     );
 }

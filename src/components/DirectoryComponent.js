@@ -78,21 +78,26 @@ class Directory extends Component {
                         </Card>
                         <Card className="col-md-5 m-1">
                             <Link onClick={this.toggleModal} >
-                            <CardImg width='100%' height={270} src={this.props.directoryLists[3].image} alt={this.props.directoryLists[3].name} />
-                            <CardImgOverlay>
-                                <CardTitle>{this.props.directoryLists[3].name}</CardTitle>
-                            </CardImgOverlay>
+                                <CardImg width='100%' height={270} src={this.props.directoryLists[3].image} alt={this.props.directoryLists[3].name} />
+                                <CardImgOverlay>
+                                    <CardTitle>{this.props.directoryLists[3].name}</CardTitle>
+                                </CardImgOverlay>
                             </Link>
                             <CardBody>
                                 <CardText>{this.props.directoryLists[3].description}</CardText>
                             </CardBody>
                         </Card>
                         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal} >Shark</ModalHeader>
-                    <ModalBody>
-                        Text text to see if works.
+                            <ModalHeader className='modal-content bg-info' toggle={this.toggleModal} >Be Aware!</ModalHeader>
+                            <ModalBody>
+                                Fun Fact:  About a dozen shark species frequent Tampa Bay.
+                                Tenants include hammerheads, bonnetheads, nurse sharks, blacktips, lemon sharks and bull sharks to name a few.
+                                Sharks migrate in and out of Florida's waters each year. Their movements are usually associated with temperature
+                                change or the presence of prey such as small baitfish, mullet and menhaden. Expecting mothers often travel into shallow-water estuaries,
+                                give birth and then leave. Although the bay attracts both a frenzy of shark and human activity during the summer, shark attacks are rare.
+                                The odds of being attacked by a shark in the U.S. are roughly 1 in 6 million, according to the International Shark Attack Files.
                     </ModalBody>
-                    </Modal>
+                        </Modal>
                     </div>
                 </FadeTransform>
                 <br />

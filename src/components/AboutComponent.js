@@ -18,10 +18,10 @@ function About() {
             <div className="row row-content">
                 <div className="col-sm-6">
                     <h3>My Mission</h3>
-                    <p>To show a small fraction of places to go and adventures to take in the Tampa Bay waters.  
-                        I view boats as a vehicle to explore exciting new places and a great way to spend the day 
-                        relaxing helping to take care of the stresses of life. With a boat, you can spend the day 
-                        on an island beach, grab a bite to eat at a restaurant, or cool off on a sandbar.  
+                    <p>To show a small fraction of places to go and adventures to take in the Tampa Bay waters.
+                    I view boats as a vehicle to explore exciting new places and a great way to spend the day
+                    relaxing helping to take care of the stresses of life. With a boat, you can spend the day
+                    on an island beach, grab a bite to eat at a restaurant, or cool off on a sandbar.
                         The possibilities are endless!</p>
                 </div>
                 <div className="col-sm-6">
@@ -45,13 +45,13 @@ function About() {
                             <blockquote className="blockquote">
                                 <p className="mb-0">"The sea, once it casts its spell, holds one in its net of wonder forever".</p>
                                 <footer className="blockquote-footer">Jacques Yves Custeau{' '}
-                                    
+
                                 </footer>
                             </blockquote>
                         </CardBody>
                     </Card>
                 </div>
-               
+
             </div>
         </div>
     )

@@ -22,7 +22,7 @@ class Contact extends Component {
                 <div className="row row-content align-items-center" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
                     <div className="col-sm-4">
                         <h5>My Name</h5>
-                        <p>Capt Jason Booe</p>
+                        <p>Jason Booe</p>
                         <h5>My Address</h5>
                         <address>
                             5290 14th st NE<br />
