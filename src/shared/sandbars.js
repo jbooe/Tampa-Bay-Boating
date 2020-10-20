@@ -10,7 +10,7 @@ export const SANDBARS = [
         id: 1,
         name: 'Weeden Island Sandbar',
         coord: '27.8454 N, 82.6001 W',
-        description: 'A popular place for boaters on holiday weekends',
+        description: 'A popular place for kayakers',
         image: 'assets/images/weeden-island-sandbar.jpg'
     },
     {
