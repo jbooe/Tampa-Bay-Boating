@@ -1,8 +1,24 @@
-import React, { Component }  from 'react';
-import { Navbar, NavbarBrand, Jumbotron, NavItem, Nav } from 'reactstrap';
+import React, { Component } from 'react';
+import { Navbar, NavbarBrand, Jumbotron, NavItem, Nav, Collapse, NavbarToggler } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isNavOpen: false
+        };
+
+        this.toggleNav = this.toggleNav.bind(this);
+    }
+
+    toggleNav() {
+        this.setState({
+            isNavOpen: !this.state.NavOpen
+        });
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -19,8 +35,11 @@ class Header extends Component {
 
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/"><img src='/assets/images/anchor2.png' height="50" width="50" alt="Anchor Logo" /></NavbarBrand>
-                        <Nav navbar>
+
+                        <NavbarBrand className="mr-auto" href="/"><img src='/assets/images/anchor2.png' height="50" width="50" alt="Anchor Logo" />Welcome Aboard</NavbarBrand>
+                        <NavbarToggler onClick={this.toggleNav} />
+                        <Collapse className='mr-auto' isOpen={this.state.isNavOpen} navbar>
+                            <Nav className="ml-auto" navbar>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/home">
                                         <i className="fa fa-home fa-lg" /> Home
@@ -42,6 +61,7 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                             </Nav>
+                        </Collapse>
                     </div>
                 </Navbar>
             </React.Fragment>
