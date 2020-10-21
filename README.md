@@ -1,3 +1,7 @@
+This Web application was created for those new to boating in the Tampa Bay area.  It helps to show the vast number of places
+to explore and things to do.  
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
