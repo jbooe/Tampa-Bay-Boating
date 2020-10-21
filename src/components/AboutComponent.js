@@ -2,6 +2,9 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+
+//Creating an About link in my project
+
 function About() {
     return (
         <div className="container">

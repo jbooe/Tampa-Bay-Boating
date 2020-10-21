@@ -3,6 +3,9 @@ import { Card, CardImg, CardTitle, Breadcrumb, BreadcrumbItem, CardImgOverlay, C
 import { Link } from 'react-router-dom';
 import { Fade } from 'react-animation-components';
 
+/* The functional Component RenderDirectoryItem is used as the framework for the Cards and is passed 
+in while mapping through the array of object literals.  Fade is used to add some dynamic behaviour 
+for demonstrative purposes. */
 
 function RenderDirectoryItem({ directoryItem }) {
 
@@ -21,6 +24,9 @@ function RenderDirectoryItem({ directoryItem }) {
         </Fade>
     );
 }
+
+/* The 3 functional Components listed below are used to display the selected directoryLists items 
+from the Directory Component. Each one has a BreadcrumbItem to redirect the link back to the Directory.*/
 
 export function DisplaySandbars(props) {
 

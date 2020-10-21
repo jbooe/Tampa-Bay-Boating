@@ -13,6 +13,8 @@ import { BOATS } from '../shared/boating';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { DisplaySandbars, DisplayRestaurants, DisplayIslands } from './DisplayComponents';
 
+/*The Main Component holds all the state data for the shared files.  It also holds the 
+Header and Footer Components with multiple Routes paths passed in redirecting the display from component to component*/
 
 class Main extends Component {
     constructor(props) {
@@ -27,7 +29,6 @@ class Main extends Component {
         };
 
     }
-
 
     render() {
 

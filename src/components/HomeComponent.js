@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardImg } from 'reactstrap';
 
-
+//The functional Component RenderCard is used to display the home page Image and is probably not necessary but was used for demonstration.
 
 function RenderCard({ item }) {
     return (
@@ -11,6 +11,8 @@ function RenderCard({ item }) {
         </Card>
     );
 }
+
+//The functional Component Home is a simple card using RenderCard and also displays a nautical poem.
 
 function Home(props) {
     return (

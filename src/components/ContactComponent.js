@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+//Creating a simple Contact link with anchor tags using ReactStrap, Router, Font Awesome Icons and JSX components.
+
 class Contact extends Component {
 
     render() {
@@ -18,7 +20,6 @@ class Contact extends Component {
                         <hr />
                     </div>
                 </div>
-
                 <div className="row row-content align-items-center" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
                     <div className="col-sm-4">
                         <h5>My Name</h5>

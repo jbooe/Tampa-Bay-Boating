@@ -3,7 +3,7 @@ import { Card, CardImg, CardTitle, Breadcrumb, BreadcrumbItem, CardImgOverlay, C
 import { Link } from 'react-router-dom';
 import { FadeTransform } from 'react-animation-components';
 
-
+//I created the Directory Component to hold the state isModalOpen for the toggle verses creating a Functional Component.  
 
 class Directory extends Component {
     constructor(props) {
@@ -13,7 +13,6 @@ class Directory extends Component {
             isModalOpen: false
         }
 
-        this.toggleModal = this.toggleModal.bind(this)
     }
 
     toggleModal = () => {
@@ -21,6 +20,11 @@ class Directory extends Component {
             isModalOpen: !this.state.isModalOpen
         });
     }
+
+    /* Created cards to show the directoryLists items and establish a link to the array of object literals to describe each location. The state
+    of directoryLists are held in the Main Component so i passed them in using props. I used the Fade Transform from React Animation to show some dynamic 
+    animation for display purposes.  The BreadCrumb is used to link Home and Directory. I created a modal using the 3rd indexed object image in the 
+    directoryLists array as the link to display some fun factual information*/
 
     render() {
         return (
@@ -42,7 +46,6 @@ class Directory extends Component {
                     }}
                 >
                     <div className="row" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
-
                         <Card className="col-md-5 m-1">
                             <Link to='/displayislands'>
                                 <CardImg width='100%' height={270} src={this.props.directoryLists[0].image} alt={this.props.directoryLists[0].name} />
@@ -87,7 +90,7 @@ class Directory extends Component {
                                 <CardText>{this.props.directoryLists[3].description}</CardText>
                             </CardBody>
                         </Card>
-                        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                        <Modal isOpen={this.state.isModalOpen} >
                             <ModalHeader className='modal-content bg-info' toggle={this.toggleModal} >Be Aware!</ModalHeader>
                             <ModalBody>
                                 Fun Fact:  About a dozen shark species frequent Tampa Bay.

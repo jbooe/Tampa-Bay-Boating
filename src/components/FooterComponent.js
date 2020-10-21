@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Footer(props) {
+//Created a footer using Link for Components and anchor tags for the Font Awesome Icons.  The Social Media links are for demonstrative purposes only.
+
+function Footer() {
     return (
         <footer className="site-footer">
             <div className="container">

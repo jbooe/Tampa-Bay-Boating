@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Jumbotron, NavItem, Nav, Collapse, NavbarToggler } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
+/*Created a stateful Header Component for the Header and sticky Navbar. I used Font Awesome Icons for the NavLinks 
+and created a Collapsable NavBar Toggler */
+
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -9,11 +12,9 @@ class Header extends Component {
         this.state = {
             isNavOpen: false
         };
-
-        this.toggleNav = this.toggleNav.bind(this);
     }
 
-    toggleNav() {
+    toggleNav = () => {
         this.setState({
             isNavOpen: !this.state.NavOpen
         });
