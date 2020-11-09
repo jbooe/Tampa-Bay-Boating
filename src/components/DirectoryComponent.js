@@ -59,7 +59,7 @@ class Directory extends Component {
                         </Card>
                         <Card className="col-md-5 m-1">
                             <Link to='/displaysandbars'>
-                                <CardImg width='100%' height={270} src={this.props.directoryLists[1].image} alt={this.props.directoryLists[1].name} />
+                                <CardImg  width='100%' height={270} src={this.props.directoryLists[1].image} alt={this.props.directoryLists[1].name} />
                                 <CardImgOverlay>
                                     <CardTitle>{this.props.directoryLists[1].name}</CardTitle>
                                 </CardImgOverlay>
@@ -90,7 +90,7 @@ class Directory extends Component {
                                 <CardText>{this.props.directoryLists[3].description}</CardText>
                             </CardBody>
                         </Card>
-                        <Modal isOpen={this.state.isModalOpen} >
+                        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                             <ModalHeader className='modal-content bg-info' toggle={this.toggleModal} >Be Aware!</ModalHeader>
                             <ModalBody>
                                 Fun Fact:  About a dozen shark species frequent Tampa Bay.

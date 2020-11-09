@@ -32,7 +32,7 @@ export function DisplaySandbars(props) {
 
     const directory = props.sandbars.map(directoryItem => {
         return (
-            <div key={directoryItem.id} className="col-md-5 m-1" >
+            <div key={directoryItem.id} className="col-md-5 m-1"  >
                 <RenderDirectoryItem directoryItem={directoryItem}
                 />
             </div>
