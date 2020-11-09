@@ -1,5 +1,4 @@
-export const DESTINATIONS [
-     boatsk [
+export const DESTINATIONS = [
         {
             id: 0,
             featured: true,
@@ -24,5 +23,4 @@ export const DESTINATIONS [
             image: 'assets/images/boatingGeneric4.jpg',
             altText: 'Slide 4'
         }
-    ]
 ]
