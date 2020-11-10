@@ -1,8 +1,12 @@
+import  boatingGeneric  from 'assets/images/boatingGeneric.jpg';
+
+
+
 export const DESTINATIONS = [
         {
             id: 0,
             featured: true,
-            image: 'assets/images/boatingGeneric.jpg',
+            image: boatingGeneric,
             altText: 'Slide 1'
         },
         {

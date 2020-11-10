@@ -1,3 +1,4 @@
+
 export const BOATS = [
     {
         id: 0,
